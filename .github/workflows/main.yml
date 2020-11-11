@@ -13,7 +13,7 @@ jobs:
           with:
             dotnet-version: 3.1.x
         - name: Publish with dotnet
-          run: dotnet publish ./src/BlazorGithubPagesUsingGithubActions.sln --configuration Release --output build --nologo
+          run: dotnet publish ./src/QRCodeReaderWasm.sln --configuration Release --output build --nologo
         - name: Deploy to Github Pages
           uses: JamesIves/github-pages-deploy-action@releases/v3
           with:
