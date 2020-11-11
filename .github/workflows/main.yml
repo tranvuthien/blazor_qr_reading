@@ -15,10 +15,10 @@ jobs:
         - name: Publish with dotnet
           run: dotnet publish ./src/QRCodeReaderWasm.sln --configuration Release --nologo
         - name: Deploy to Github Pages
-          uses: tranvuthien/blazor_qr_reading@v3.6.1
+          uses: JamesIves/github-pages-deploy-action@releases/v3
           with:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BASE_BRANCH: master
+            BASE_BRANCH: main
             BRANCH: main
             FOLDER: build/wwwroot
             CLEAN: true
