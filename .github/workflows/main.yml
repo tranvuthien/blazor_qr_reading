@@ -15,7 +15,7 @@ jobs:
         - name: Publish with dotnet
           run: dotnet publish ./src/QRCodeReaderWasm.sln --configuration Release --output build
         - name: Deploy to Github Pages
-          uses: tranvuthien/github-pages-deploy-action@releases/v3
+          uses: tranvuthien/github-pages-deploy-action
           with:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             BASE_BRANCH: master
