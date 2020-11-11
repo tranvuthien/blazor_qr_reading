@@ -11,14 +11,14 @@ jobs:
         - name: Setup .NET Core 
           uses: actions/setup-dotnet@v1
           with:
-            dotnet-version: 3.1.300
+            dotnet-version: 3.1.x
         - name: Publish with dotnet
-          run: dotnet publish ./src/QRCodeReaderWasm.sln --configuration Release --output build
+          run: dotnet publish ./src/QRCodeReaderWasm.sln --configuration Release --output build --nologo
         - name: Deploy to Github Pages
-          uses: tranvuthien/github-pages-deploy-action@releases/v3
+          uses: JamesIves/github-pages-deploy-action@releases/v3
           with:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BASE_BRANCH: master
-            BRANCH: main
+            BASE_BRANCH: main
+            BRANCH: gh-pages
             FOLDER: build/wwwroot
             CLEAN: true
