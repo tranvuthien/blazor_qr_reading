@@ -1,0 +1,1 @@
+# blazor_qr_reading
