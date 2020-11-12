@@ -61,7 +61,7 @@
                 return;
 
             } else {
-                loadingMessage.innerHTML = 'スキャニング...';
+                loadingMessage.innerHTML = 'スキャニング...' + video.videoHeight + 'x' + video.videoWidth;
             }
         }
 
