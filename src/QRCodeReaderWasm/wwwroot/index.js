@@ -18,7 +18,7 @@
         canvas.stroke();
     }
 
-    navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function (stream) {
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment", aspectRatio: 1 } }).then(function (stream) {
         video.srcObject = stream;
         video.setAttribute("playsinline", true); // tell iOS safari we don't want fullscreen
         video.play();
