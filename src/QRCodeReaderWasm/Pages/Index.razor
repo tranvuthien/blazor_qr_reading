@@ -11,7 +11,6 @@
 
     #loadingMessage {
         text-align: center;
-        padding: 40px;
         background-color: #eee;
     }
 
@@ -23,17 +22,14 @@
 
 <h1>QR Reading Test</h1>
 
-<div id="loadingMessage">カメラにアクセスの設定が必要です。</div>
+<div id="loadingMessage">カメラにアクセスの許可が必要です。</div>
 
+<br />
 <br />
 <input id="btnScan" type="button" class="btn btn-primary"　@onclick="Scan" value="QRスキャン"/>
 
 <br />
 <br />
-@*<div id="output" hidden>
-    <div id="outputMessage"></div>
-    <div hidden><b>Data:</b> <span id="outputData"></span></div>
-</div>*@
 <canvas id="canvas" hidden></canvas>
 
 @code
